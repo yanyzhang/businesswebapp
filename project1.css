@@ -1,0 +1,412 @@
+
+body {
+    font-family: "Gill Sans", sans-serif;
+}
+
+.navbar {
+    padding: 20px;;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav-login-modal a{
+    color: rgb(0, 0, 0);
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-size: small;
+
+}
+
+button:hover {background-color: rgba(180, 176, 176, 0.5);}
+
+.dropdown-menu a:hover{
+    background-color: lightgray;
+}
+
+
+
+
+.img-text-container {
+    position: relative;
+    /* margin-top: 2em; */
+    /* top: 15vw;
+    left: 10vw;
+    color: white;
+    margin: auto;
+    width: 80%; */
+
+    /* transform: translate(-50%, -50%); */
+}
+
+.inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(40, 40, 40, 0.3);
+    color: #ffffff;
+    padding: 1px;
+
+  }
+
+
+ /*<-- login modal -->*/
+.modal-content {
+    box-sizing: border-box;
+    padding: 30px;
+
+}
+
+.btn-close {
+    margin-left: auto;
+
+}
+
+
+.clearfix .loginbtn {
+    background-color: black;
+}
+
+.clearfix .signupbtn {
+    background-color: #221f1fb9;
+}
+
+  /* Float cancel and signup buttons and add an equal width */
+.clearfix button {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+}
+
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .loginbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+
+.term p {
+    text-align: center;
+    font-size: 0.75em;
+    color: black
+}
+  
+
+.modal input[type=text], .modal-content input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    box-sizing: border-box;
+    border-color: rgba(12, 12, 12);
+    background-color: rgb(255, 255, 255);
+
+}
+  
+.modal input[type=text]:focus, .modal-content input[type=password]:focus {
+    background-color: white;
+}
+
+/* .flex-container {
+    display: flex;
+    justify-content: space-between; 
+    flex: 50%; 
+    gap: 10px;
+
+} */
+
+/* button {
+    background-color: #a9aaaa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}  */
+
+/* .button:hover {
+    opacity:1;
+} */
+
+.modal-login-option {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.modal-content .start {
+    font-size: medium;
+    background-color: #000000;
+    padding: 5px;
+}
+
+.modal-content p {
+    font-size: 0.75em;
+    color: black;
+    text-align: center;
+}
+
+
+
+<-- grids -->
+
+
+.parts {
+    /* background-color: #E7E9EB; */
+    text-align: center;
+    margin-top: 5em;
+
+}
+
+.parts h3 {
+    text-align: center;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+    font-weight: 500;
+    font-size: 1.5em;
+    color: rgb(87, 87, 87);
+    position: relative;
+    padding-top: 2em;
+
+}
+
+
+
+.grid-container {
+    display: grid;
+    /* justify-content: center; */
+    gap: 1rem;
+    /* grid-template-columns: auto auto auto; */
+    /* background-color: #ffffff; */
+    /* padding: 70px; */
+    padding: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+.grid-container img {
+    display: block;
+    /* padding: 0.75em; */
+    width: 100%;  
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+
+
+    /* border: 1px solid rgba(138, 124, 124, 0.8); */
+}
+
+.grid-item {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    /* font-size: 10vw; */
+    text-align: center;
+    padding: 1em;
+
+}
+
+@media (min-width: 300px) {
+    .grid-container { grid-template-columns: repeat(1, 1fr); }
+  }
+
+/*add: if display size if less than certain, then the grid-item p should be hidden */
+
+@media (min-width: 600px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+@media (min-width: 900px) {
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+  }
+
+@media only screen and (max-width: 400px) {
+    .grid-item p {
+        display: none;
+    }
+}
+
+
+.grid-item h5 {
+    font-size: 0.75em;
+    color: #000000;
+    height: 2cqb;
+    line-height: 3.0;
+ 
+}
+
+
+.grid-item a {
+    font-size: 0.75em;
+    color: rgb(56, 56, 56);
+    text-transform: uppercase;
+    
+
+}
+
+.modal-header h5 {
+    font-size: 1em;
+}
+
+/* grid-container modal */
+.modal-body {
+    background-color: #f8f8f8;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+.modal-body p {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.mini-cart-price {
+    line-height: 5;
+}
+
+
+.quantity-container input{
+    line-height: 1;
+    width: 20%;
+}
+
+
+.mini-cart-link-cart {
+    line-height: 5;
+}
+
+.modalsummary {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.account {
+    height: 50%;
+    width: 60%;
+    background-color: #101818;
+    padding: 30px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
+.term p {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    box-sizing: border-box;
+    /* width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    /* display: inline-block; */
+    /* border-style: groove; */
+    border-color: rgba(255, 255, 255, 0.3);
+    background: #101818;
+
+  }
+  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddddddd8;
+    outline: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    flex: 50%; 
+    gap: 10px;
+
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+button:hover {
+    opacity:1;
+}
+  
+  /* Extra styles for the cancel button */
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #505050b9;
+}
+  
+  /* Float cancel and signup buttons and add an equal width */
+.loginbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+  
+  /* Add padding to container elements */
+/* .container {
+    padding: 16px;
+} */
+  
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .loginbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+p {
+    font-size: 0.75em;
+    color: white;
+    text-align: center;
+}
+
+
+.start {
+    font-size: 20px;
+    /* letter-spacing: 3px; */
+}
+
+
+
+footer p{
+    font-size: small;
+}
+
+footer ul {
+    font-size: small;
+}

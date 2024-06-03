@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SE Boot Camp Assignment 1</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="project1.css" />
+    <!-- <script src="project1js.js"></script> -->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">STUDIO</a>
+        <div class="nav flex-container-end">
+
+          <!--nav login modal-->
+          <div class="btn nav-login-modal">
+            <a data-bs-target="#login" data-bs-toggle="modal" href="">Log in</a>
+            <div class="modal" id="login">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+                  <div class="clearfix">
+                    <a href=""><button type="button" class="signupbtn">Sign Up</button></a>
+                    <a href=""><button type="button" class="loginbtn">Log In</button></a>
+                  </div>
+
+                  <div class="term">
+                    <p>
+                      By continuing, I agree to the
+                      <a href="#" style="color: rgb(0, 0, 0)">Terms & Privacy</a>.
+                    </p>
+                  </div>
+
+                  <div class="inputs">
+                    <div class="emailpass">
+                      <input
+                        type="text"
+                        placeholder="Email Address*"
+                        name="email"
+                        required
+                      />
+
+                      <input
+                        type="password"
+                        placeholder="Password*"
+                        name="password"
+                        required
+                      />
+                    </div>
+                  </div>
+
+
+                  <!--remember me checkbox-->
+                  <div class="modal-login-option">
+                    <div class="modal-login-checkbox">
+                      <div class="modal-login-rememberme">
+                        <div class="modal-login-rememberbox">
+                          <input name="rememberMe" id="rememberMe" type="checkbox" data-testid="checkboxInput">
+                          <label class="modal-login-remember" for="rememberMe">Remember me</label>
+                        </div>
+                      </div>
+                      <span class="rememberMeBox" aria-live="polite"></span>
+                    </div>
+                    <a class="modal-login-password-help" href="">Forgot password?</a>
+                  </div>
+
+                  <!-- login button-->
+                  <div>
+                    <button class="start">Login</button>
+                  </div>
+
+                  <p>
+                    Don't have an account?
+                    <a href="" style="color: rgb(19, 103, 187)">Create One</a></a>
+                    
+                  </p>
+            
+                  <div class="help">
+                    <p><a href="#" style="color: rgb(0, 0, 0)">Need Help?</a></p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--nav-bar dropdown toggle-->
+          <div class="dropdown">
+            <a
+              class="btn btn-light toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="open menu"
+              ><span class="navbar-toggler-icon"> </span>
+            </a>
+
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-hover;"
+              aria-labelledby="dropdownMenuLink"
+            >
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#">Products</a></li>
+              <li><a class="dropdown-item" href="#">New Now</a></li>
+              <li><a class="dropdown-item" href="#">Featured</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- body part-->
+    <div class="container-fluid">
+      <div class="img-text-container">
+        <img
+          src="img/home2.jpg"
+          class="img-fluid mx-auto d-block"
+          alt="Responsive image"
+        />
+
+        <div class="text-center bg-text inner">
+          <p class="display-5">
+            Create. <br />
+            Inspire. <br />
+            Decorate.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="parts">
+      <h3>Trending Now</h3>
+
+
+      <div class="grid-container">
+        <!--item 0--->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/ceramicvase.jpg" alt="" />
+            <h5>Large Ceramic Vase</h5>
+            <h5 class="grid-item-price">$39.00</h5>
+            <a data-bs-target="#vase" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+        <!-- modal 0-->
+        <div class="modal" id="vase">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Large Ceramic Vase</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/ceramicvase1.jpg" alt="" />
+                <p class="text-dark">
+                  Large, circular ceramic vase. Diameter 11 3/4 in., total height 12 1/4 in. Diameter of opening 2 1/4 in.
+                </p>
+              </div>
+              <div
+                class="mini-cart-content right-drawer"
+                data-just-added-qty="1"
+              >
+                <div id="minicart-items-form" tabindex="0">
+                  <div class="mini-cart-pricing">
+                    <span class="mini-cart-price"
+                      >$39.00</span
+                    >
+                    <div class="quantity-container">
+                      <span class="label">Enter the Qty:</span>
+                      <input
+                        class="value"
+                        id="numberInput0"
+                        type="number"
+                        maxlength="2"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                      />
+                    </div>
+                    <div class=modalsummary id="summary0"></div>
+                  </div>
+
+                  <div class="mini-cart-totals" tabindex="0">
+                    <a class="button mini-cart-link-cart" href="" tabindex="0"
+                      >View bag &amp; Checkout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-to-cart-button0" class="btn btn-dark">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--item 1-->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/plantpot.jpg" alt="" />
+            <h5>Rattan Plant Pot Stand</h5>
+            <h5 class="grid-item-price">$48.00</h5>
+            <a data-bs-target="#pot" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+
+          <!--modal 1-->
+          <div class="modal" id="pot">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Rattan Plant Pot Stand</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/plantpot1.jpg" alt="" />
+                  <p class="text-dark">
+                    Elevate your plants and home decor with this vintage-look
+                    plant pot stand in rattan that remains relevant across
+                    seasons. Diameter at top 10 3/4 in. Total height 12 1/2 in.
+                  </p>
+                </div>
+                <div
+                  class="mini-cart-content right-drawer"
+                  data-just-added-qty="1"
+                >
+                  <div id="minicart-items-form" tabindex="0">
+                    <div class="mini-cart-pricing">
+                      <span class="mini-cart-price"
+                        >$48.00</span
+                      >
+                      <div class="quantity-container">
+                        <span class="label">Enter the Qty:</span>
+                        <input
+                          class="value"
+                          id="numberInput1"
+                          type="number"
+                          maxlength="2"
+                          name="quantity"
+                          value="1"
+                          min="1"
+                          max="20"
+                        />
+                      </div>
+                      <div class="modalsummary" id="summary1"></div>
+                    </div>
+
+                    <div class="mini-cart-totals" tabindex="0">
+                      <a class="button mini-cart-link-cart" href="" tabindex="0"
+                        >View bag &amp; Checkout</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="add-to-cart-button1" class="btn btn-dark">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--item 2-->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/softtoy.jpg" alt="" />
+            <h5>Soft Toy</h5>
+            <h5 class="grid-item-price">$6.00</h5>
+            <a data-bs-target="#softtoy" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+        <!--modal 2-->
+        <div class="modal" id="softtoy">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Soft Toy</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/softtoy1.jpg" alt="" />
+                <p class="text-dark">
+                  Soft toy with appliqués and embroidered details.
+                </p>
+              </div>
+              <div
+                class="mini-cart-content right-drawer"
+                data-just-added-qty="1"
+              >
+                <div id="minicart-items-form" tabindex="0">
+                  <div class="mini-cart-pricing">
+                    <span class="mini-cart-price"
+                      >$6.00</span
+                    >
+                    <div class="quantity-container">
+                      <span class="label">Enter the Qty:</span>
+                      <input
+                        class="value"
+                        id="numberInput2"
+                        type="number"
+                        maxlength="2"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                      />
+                    </div>
+                    <div class="modalsummary" id="summary2"></div>
+                  </div>
+
+                  <div class="mini-cart-totals" tabindex="0">
+                    <a class="button mini-cart-link-cart" href="" tabindex="0"
+                      >View bag &amp; Checkout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-to-cart-button2" class="btn btn-dark">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--item 3-->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/scentedcandle.jpg" alt="" />
+            <h5>Small Scented Candle in Glass Holder</h5>
+            <h5 class="grid-item-price">$5.00</h5>
+            <a data-bs-target="#candle" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+        <!--modal 3-->
+        <div class="modal" id="candle">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Small Scented Candle in Glass Holder</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/scentedcandle1.jpg" alt="" />
+                <p class="text-dark">
+                  Small, scented candle in a glass holder with a metal lid. Diameter approx. 2 1/2 in. Height 2 1/2 in. Burn time 12 hours.
+                </p>
+              </div>
+              <div
+                class="mini-cart-content right-drawer"
+                data-just-added-qty="1"
+              >
+                <div id="minicart-items-form" tabindex="0">
+                  <div class="mini-cart-pricing">
+                    <span class="mini-cart-price"
+                      >$5.00</span
+                    >
+                    <div class="quantity-container">
+                      <span class="label">Enter the Qty:</span>
+                      <input
+                        class="value"
+                        id="numberInput3"
+                        type="number"
+                        maxlength="2"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                      />
+                    </div>
+                    <div class="modalsummary" id="summary3"></div>
+                  </div>
+
+                  <div class="mini-cart-totals" tabindex="0">
+                    <a class="button mini-cart-link-cart" href="" tabindex="0"
+                      >View bag &amp; Checkout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-to-cart-button3" class="btn btn-dark">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!--item 4-->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/linenblendwall.jpg" alt="" />
+            <h5>Linen-blend Wall Art</h5>
+            <h5 class="grid-item-price">$52.00</h5>
+            <a data-bs-target="#art" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+        <!--modal 4-->
+        <div class="modal" id="art">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Linen-blend Wall Art</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/linenblendwall1.jpg" alt="" />
+                <p class="text-dark">
+                  Wall art printed on a linen-blend canvas with a wooden frame and medium-density fiberboard back. Designed in neutral, natural tones, it blends with any decor. Hangers at back for hanging in either direction. Width 17 3/4 in. Height 24 3/4 in.
+                </p>
+              </div>
+              <div
+                class="mini-cart-content right-drawer"
+                data-just-added-qty="1"
+              >
+                <div id="minicart-items-form" tabindex="0">
+                  <div class="mini-cart-pricing">
+                    <span class="mini-cart-price"
+                      >$52.00</span
+                    >
+                    <div class="quantity-container">
+                      <span class="label">Enter the Qty:</span>
+                      <input
+                        class="value"
+                        id="numberInput4"
+                        type="number"
+                        maxlength="2"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                      />
+                    </div>
+                    <div class="modalsummary" id="summary4"></div>
+                  </div>
+
+                  <div class="mini-cart-totals" tabindex="0">
+                    <a class="button mini-cart-link-cart" href="" tabindex="0"
+                      >View bag &amp; Checkout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-to-cart-button4" class="btn btn-dark">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!--item 5-->
+        <div class="grid-item">
+          <div class="grid-item-basic">
+            <img src="img/woodenchair.jpg" alt="" />
+            <h5>Wooden Folding Chair</h5>
+            <h5 class="grid-item-price">$169.00</h5>
+            <a data-bs-target="#chair" data-bs-toggle="modal" href=""
+              >View Details</a
+            >
+          </div>
+        <!--modal 5-->
+        <div class="modal" id="chair">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Wooden Folding Chair</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/woodenchair1.jpg" alt="" />
+                <p class="text-dark">
+                  Folding chair in beech with a rattan seat and back. Adjustable back for added comfort. Folds easily to save space. Supplied fully assembled. Seat depth approx. 15 1/4 in. Seat height approx. 17 1/4 in. Width 17 1/4 in. Depth 19 3/4 in. Height 30 3/4 in. Weight approx. 10 lb.
+                </p>
+                <p class="text-danger">This item is limited to 6 per customer.</p>
+              </div>
+              <div
+                class="mini-cart-content right-drawer"
+                data-just-added-qty="1"
+              >
+                <div id="minicart-items-form" tabindex="0">
+                  <div class="mini-cart-pricing">
+                    <span class="mini-cart-price"
+                      >$169.00</span
+                    >
+                    <div class="quantity-container">
+                      <span class="label">Enter the Qty:</span>
+                      <input
+                        class="value"
+                        id="numberInput5"
+                        type="number"
+                        maxlength="2"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                      />
+                    </div>
+                    <div class="modalsummary" id="summary5"></div>
+                  </div>
+
+                  <div class="mini-cart-totals" tabindex="0">
+                    <a class="button mini-cart-link-cart" href="" tabindex="0"
+                      >View bag &amp; Checkout</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="add-to-cart-button5" class="btn btn-dark">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer with links-->
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Studio, Inc</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="project1js.js"></script>
+  </body>
+</html>
